@@ -8,6 +8,14 @@ function convertToRoman(num) {
       5:['V', 5], 
       6:['I', 1]
     };
+	 var roman = '',i;
+	for ( i in  obj) {
+    while ( num >=obj[i] ) {
+      roman += i;
+      num -= obj[i];
+    }
+  }
+  return roman;
 
   //your code here
 
